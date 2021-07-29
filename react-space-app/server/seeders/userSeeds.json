@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Mary",
+    "email": "Mary@hotmail.com",
+    "password": "Mary123",
+    "photos": ["ABC", "DEF", "XYZ"],
+    "preferences": ["NASA", "MARSROVER"]
+  },
+  {
+    "name": "Ryan",
+    "email": "Ryan@hotmail.com",
+    "password": "Ryan123",
+    "photos": ["MLK", "HIJ"],
+    "preferences": ["NASA", "ISS"]
+  },
+  {
+    "name": "Eric",
+    "email": "Eric@hotmail.com",
+    "password": "Eric123",
+    "photos": ["TUV"],
+    "preferences": ["SpaceX", "Bezos"]
+  },
+  {
+    "name": "Carl",
+    "email": "Carl@hotmail.com",
+    "password": "Carl123",
+    "photos": ["JKM", "NOP"],
+    "preferences": ["Nasa", "SpaceX"]
+  }
+]
+
+ 
