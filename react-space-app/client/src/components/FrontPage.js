@@ -21,15 +21,13 @@ function FrontPage(props) {
                                 <button onClick = {() => ("")} id="frontLoginButton">Login</button>
                                 <button onClick = {() => props.pageChanger("SignUp")}>Sign Up</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div id="frontRowTwo"></div>
-                        <div id="frontRowThree"></div>
-                    </div>
+                      </div>
+                    <div id="frontRowTwo"></div>
+                    <div id="frontRowThree"></div>
                 </div>
             </div>
+        </div>
         </>
     )
 }
-
 export default FrontPage;
