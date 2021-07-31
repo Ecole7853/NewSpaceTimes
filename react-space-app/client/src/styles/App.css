@@ -72,11 +72,36 @@ body {
   min-width: 25vw;
 }
  
+#SignUp {
+  min-width: 100%;
+  min-height: 100%;
+  background: url(../images/Space1.jpg) center center no-repeat;
+  width:100vh;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+#SignUpInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 200px;
+  margin-top: -100px; /* half of you height */
+  width: 200px;
+  margin-left: -100px; /* half of you width */
+}
 
- 
-
-
+#signUpButton {
+  margin-top: 10px;
+}
 
 /* preloaded react stuff */
 
