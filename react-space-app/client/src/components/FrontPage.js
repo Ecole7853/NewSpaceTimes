@@ -43,7 +43,6 @@ const FrontPage = () => {
 
     return (
         <>
-
             <div id="frontContainer">
                 <div id="frontImage">
                     <div id="frontSpacingContainer">
@@ -70,5 +69,4 @@ const FrontPage = () => {
         </>
     )
 }
-
 export default FrontPage;
