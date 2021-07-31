@@ -2,6 +2,7 @@ import './styles/App.css';
 import React, { useState } from "react";
 import FrontPage from "./components/FrontPage";
 import Profile from "../src/pages/Profile";
+import SignUp from "./components/SignUp";
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
       if (currentPage === 'Home') {
         return <FrontPage pageChanger = {pageChanger}/>;
       }
-      if (currentPage === 'Profile'){
-        return <Profile/>
+      if (currentPage === 'SignUp'){
+        return <SignUp/>
       }
     };
   
