@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
+import { Alert } from 'react-bootstrap'
 
-const FrontPage = () => {
+const FrontPage = (props) => {
     const [userFormState, setUserFormState] = useState({ email: '', password: '' });
     const [loginUser] = useMutation(LOGIN_USER);
     //const [validated] = useState(false);
-   // const [showAlert, setShowAlert] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -30,9 +31,10 @@ const FrontPage = () => {
             });
 
             Auth.login(data.login.token);
+
         } catch (err) {
-            console.error(err);
-            //setShowAlert(true);
+            //console.error(err);
+            setShowAlert(true);
         }
 
         setUserFormState({
@@ -59,7 +61,13 @@ const FrontPage = () => {
                                         onChange={handleChange} required minLength="8" maxLength="16"></input>
                                 </div>
                                 <button id="frontSubmit" onClick={handleFormSubmit}>Enter</button>
+                                <div id="signUpButton">
+                                    <button onClick={() => props.pageChanger("SignUp")}>Sign Up</button>
+                                </div>
                             </div>
+                            <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+                                Invalid Username/Password please try again!
+                            </Alert>
                         </div>
                         <div id="frontRowTwo"></div>
                         <div id="frontRowThree"></div>
