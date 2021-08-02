@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
+import '../styles/frontpage.css';
 
-const FrontPage = () => {
+const FrontPage = (props) => {
     const [userFormState, setUserFormState] = useState({ email: '', password: '' });
     const [loginUser] = useMutation(LOGIN_USER);
     //const [validated] = useState(false);
@@ -58,7 +59,10 @@ const FrontPage = () => {
                                     <input type="password" id="frontPw" name="password" value={userFormState.password}
                                         onChange={handleChange} required minLength="8" maxLength="16"></input>
                                 </div>
-                                <button id="frontSubmit" onClick={handleFormSubmit}>Enter</button>
+                                <div id="buttons">
+                                    <button id="frontSubmit" onClick={handleFormSubmit}>Enter</button>
+                                    <button id="frontSignButton" onClick = {() => props.pageChanger("SignUp")} href="#SignUp">Sign Up</button>
+                                </div>
                             </div>
                         </div>
                         <div id="frontRowTwo"></div>
