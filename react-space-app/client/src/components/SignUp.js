@@ -3,6 +3,7 @@ import { Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import '../styles/signup.css'
 
 const SignUp = (props) => {
     // set initial form state
@@ -34,7 +35,7 @@ const SignUp = (props) => {
 
             Auth.login(data.addUser.token);
         } catch (err) {
-            console.error(err);
+            //console.error(err);
             setShowAlert(true);
         }
 
@@ -51,20 +52,20 @@ const SignUp = (props) => {
                 <div id="SignUpInput">
                     <div id="signUpNameContainer">
                         <p>Please Enter Name</p>
-                    <input type="input" id="signUpName" name="Name" required minlength="3" maxlength="32"></input>
+                        <input type="input" id="signUpName" name="name" value={userFormData.name} onChange={handleInputChange} required minLength="3" maxLength="32"></input>
                     </div>
                     <div id="signUpEmailContainer">
                         <p>Please Enter Email</p>
-                        <input type="email" id="signUpEmail" name="email"  onChange={handleInputChange}
-            value={userFormData.email} required minlength="8" maxlength="32"></input>
+                        <input type="email" id="signUpEmail" name="email" value={userFormData.email} onChange={handleInputChange}
+                            required minLength="8" maxLength="32"></input>
                     </div>
                     <div id="signUpPwContainer">
                         <p>Please Enter Password</p>
-                        <input type="password" id="signUpPw" name="password" onChange={handleInputChange}
-            value={userFormData.password} required minlength="8" maxlength="16"></input>
+                        <input type="password" id="signUpPw" name="password" value={userFormData.password} onChange={handleInputChange}
+                            required minLength="8" maxLength="16"></input>
                     </div>
                     <div id="signUpButton">
-                        <button  disabled={!(userFormData.email && userFormData.password)} onClick={handleFormSubmit} onClick={() => props.pageChanger("NewsBoard")}>Sign Up</button>
+                        <button disabled={!(userFormData.name && userFormData.email && userFormData.password)} onClick={handleFormSubmit}>Sign Up</button>
                     </div>
                 </div>
                 <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>

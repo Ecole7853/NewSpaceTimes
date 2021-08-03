@@ -47,10 +47,10 @@ function App(props) {
         return <NewsBoard pageChanger = {pageChanger}/>;
       }
       if (currentPage === 'SignUp'){
-        return <SignUp/>
+        return <SignUp pageChanger = {pageChanger}/>
       }
       if (currentPage === 'Profile'){
-        return <Profile/>
+        return <Profile pageChanger = {pageChanger}/>
       }
     };
   

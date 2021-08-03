@@ -8,7 +8,6 @@ import '../styles/frontpage.css';
 const FrontPage = (props) => {
     const [userFormState, setUserFormState] = useState({ email: '', password: '' });
     const [loginUser] = useMutation(LOGIN_USER);
-    //const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
 
     const handleChange = (event) => {
