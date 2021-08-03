@@ -49,6 +49,10 @@ const SignUp = (props) => {
         <>
             <div id="SignUp">
                 <div id="SignUpInput">
+                    <div id="signUpNameContainer">
+                        <p>Please Enter Name</p>
+                    <input type="input" id="signUpName" name="Name" required minlength="3" maxlength="32"></input>
+                    </div>
                     <div id="signUpEmailContainer">
                         <p>Please Enter Email</p>
                         <input type="email" id="signUpEmail" name="email"  onChange={handleInputChange}

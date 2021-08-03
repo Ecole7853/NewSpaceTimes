@@ -1,8 +1,9 @@
 import './styles/App.css';
 import React, { useState } from "react";
 import FrontPage from "./components/FrontPage";
-import Profile from "../src/pages/Profile";
+import Profile from "./pages/Profile";
 import SignUp from "./components/SignUp";
+import NewsBoard from "./pages/NewsBoard";
 import {
   ApolloClient,
   InMemoryCache,
@@ -33,7 +34,7 @@ const client = new ApolloClient({
 });
 
 
-function App() {
+function App(props) {
 
   const [currentPage, setCurrentPage] = useState('Home');
 
@@ -42,8 +43,14 @@ function App() {
       if (currentPage === 'Home') {
         return <FrontPage pageChanger = {pageChanger}/>;
       }
+      if (currentPage === 'NewsBoard') {
+        return <NewsBoard pageChanger = {pageChanger}/>;
+      }
       if (currentPage === 'SignUp'){
         return <SignUp/>
+      }
+      if (currentPage === 'Profile'){
+        return <Profile/>
       }
     };
   
