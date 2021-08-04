@@ -1,2 +1,13 @@
+import React from 'react';
+import '../utils/apiCalls';
 import "../styles/POTD.css";
-import React, { useState } from "react";
+
+export default function Potd () {
+    return (
+        <div>
+            <img className="daily-photo" alt="POTD - Space API Call"></img>
+        </div>
+    )
+}
+
+

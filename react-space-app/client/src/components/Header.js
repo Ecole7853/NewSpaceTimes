@@ -1,3 +1,4 @@
+import React from 'react';
 import "../styles/header.css";
 import Navigation from "./Navigation";
 
@@ -7,9 +8,6 @@ function Header() {
       <div className="row">
         <div className="navbar-brand col">
           <h1>Space News</h1>
-        </div>
-        <div className="col">
-          <Navigation />
         </div>
       </div>
     </header>

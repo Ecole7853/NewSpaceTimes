@@ -4,6 +4,7 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
 import { Alert } from 'react-bootstrap'
 import '../styles/frontpage.css';
+import { Link } from 'react-router-dom'
 
 const FrontPage = (props) => {
     const [userFormState, setUserFormState] = useState({ email: '', password: '' });
@@ -62,7 +63,7 @@ const FrontPage = (props) => {
                                 </div>
                                 <div id="buttons">
                                     <button id="frontSubmit" onClick={handleFormSubmit}>Enter</button>
-                                    <button id="frontSignButton" onClick = {() => props.pageChanger("SignUp")} href="#SignUp">Sign Up</button>
+                                    <Link to={"/signup"}><button id="frontSignButton">Sign Up</button></Link>
                                 </div>
                             </div>
                             <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
