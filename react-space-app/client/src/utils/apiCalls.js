@@ -11,11 +11,11 @@ const dailyPhoto = () => {
     })
     .then(function(data) {
         console.log(data);
-        document.getElementById("photo").src = data.url;
+        document.querySelector(".daily-photo").src = data.url;
     })
 }
 
-// dailyPhoto();
+//dailyPhoto();
 
 const marsRover = () => {
     //user will need to select sol ie. 0-1000, camera type and update url for customizable search
@@ -83,4 +83,4 @@ const spaceNews = () => {
 // spaceNews();
 
 
-
+module.exports = { dailyPhoto, marsRover, spaceNews, spaceX, issSearch }

@@ -21,6 +21,7 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
+  console.log(`TOKEN HERE:${token}`)
   // return the headers to the context so httpLink can read them
   return {
     headers: {
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route exact path="/newsboard">
               <NewsBoard />
+            </Route>
+            <Route exact path="/profile/:userId">
+              <Profile />
             </Route>
           </div>
         </div>
