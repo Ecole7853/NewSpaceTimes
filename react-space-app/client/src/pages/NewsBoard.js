@@ -6,7 +6,7 @@ import Potd from '../components/PoTD';
 
 function NewsBoard() {
   return (
-    <div>
+    <div id="newsBoardContainer">
 
       <div className="p2background">
         <Potd />
