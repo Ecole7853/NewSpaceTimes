@@ -1,5 +1,6 @@
 import React from 'react';
 import '../utils/apiCalls';
+import "../styles/POTD.css";
 
 export default function Potd () {
     return (
@@ -8,3 +9,5 @@ export default function Potd () {
         </div>
     )
 }
+
+

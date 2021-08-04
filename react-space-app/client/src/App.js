@@ -1,8 +1,9 @@
 import './styles/App.css';
-import React, { useState } from "react";
+import React from "react";
 import FrontPage from "./components/FrontPage";
-import Profile from "../src/pages/Profile";
+import Profile from "./pages/Profile";
 import SignUp from "./components/SignUp";
+import NewsBoard from "./pages/NewsBoard";
 import {
   ApolloClient,
   InMemoryCache,
@@ -10,6 +11,8 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import Header from './components/Header';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -34,28 +37,26 @@ const client = new ApolloClient({
 
 
 function App() {
-
-  const [currentPage, setCurrentPage] = useState('Home');
-
-  //    // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
-    const renderPage = () => {
-      if (currentPage === 'Home') {
-        return <FrontPage pageChanger = {pageChanger}/>;
-      }
-      if (currentPage === 'SignUp'){
-        return <SignUp/>
-      }
-    };
-  
-  const pageChanger = (page) => setCurrentPage(page);
-  
-    return (
-      <ApolloProvider client={client}>
-      <div>
-        {renderPage()}
-      </div>
-      </ApolloProvider>
-    );
+  return (
+    <ApolloProvider client={client}>
+      <Router basename="react-space-app">
+        <div>
+          <Header />
+          <div>
+            <Route exact path="/">
+              <FrontPage />
+            </Route>
+            <Route exact path="/signup">
+              <SignUp />
+            </Route>
+            <Route exact path="/newsboard">
+              <NewsBoard />
+            </Route>
+          </div>
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
 }
 
 export default App;

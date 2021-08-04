@@ -15,7 +15,7 @@ const dailyPhoto = () => {
     })
 }
 
-dailyPhoto();
+// dailyPhoto();
 
 const marsRover = () => {
     //user will need to select sol ie. 0-1000, camera type and update url for customizable search
@@ -30,7 +30,7 @@ const marsRover = () => {
     })
 }
 
-marsRover();
+// marsRover();
 
 
 const spaceX = () => {
@@ -46,7 +46,7 @@ const spaceX = () => {
     })
 }
 
-spaceX();
+// spaceX();
 
 
 const issSearch = () => {
@@ -63,7 +63,7 @@ const issSearch = () => {
     })
 }
 
-issSearch();
+// issSearch();
 
 
 const spaceNews = () => {
@@ -80,7 +80,7 @@ const spaceNews = () => {
     })
 }
 
-spaceNews();
+// spaceNews();
 
 
 

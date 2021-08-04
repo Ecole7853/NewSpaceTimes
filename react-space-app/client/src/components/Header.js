@@ -9,9 +9,6 @@ function Header() {
         <div className="navbar-brand col">
           <h1>Space News</h1>
         </div>
-        <div className="col">
-          <Navigation />
-        </div>
       </div>
     </header>
   );
