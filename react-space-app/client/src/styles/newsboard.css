@@ -1,4 +1,11 @@
 .p2background{
-    background-image:url('../images/guillermo-ferla-M_EgSITHrKA-unsplash.jpg');
-    padding: 25em
+    min-width: 100%;
+    min-height: 100%;
+    background:url(../images/reportinglive.jpg) center center no-repeat;
+    width:100vw;
+    height: 100vh;
+}
+
+#newsBoardContainer {
+    background-color: black;
 }
