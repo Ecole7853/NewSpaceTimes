@@ -6,10 +6,10 @@ import Spacexnews from "../components/spaceXnews";
 import Issnews from "../components/issNews";
 import TopSpacenews from '../components/TopSpaceNews'
 
-function NewsBoard() {
+function NewsBoard(props) {
   return (
     <div id="newsBoardContainer">
-
+    <Navigation />
       <div className="p2background">
         <Potd />
         <Spacexnews /> 

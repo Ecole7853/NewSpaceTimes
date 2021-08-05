@@ -1,19 +1,25 @@
 import "../styles/navigation.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Auth from '../utils/auth';
 
 function Navigation() {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
   return (
     <nav>
       <div className="row navLink">
         <div className="col">
-          <Link to={`/`}>Profile</Link>
+          <Link to={`/profile`}>Profile</Link>
         </div>
         <div className="col">
-          <Link to={`/`}>News Feed</Link>
+          <Link to={`/newsboard`}>News Feed</Link>
         </div>
         <div className="col">
-          <Link to={`/`}>Logout </Link>
+        <Link onClick={logout} to={`/`}>Logout</Link>
         </div>
       </div>
     </nav>

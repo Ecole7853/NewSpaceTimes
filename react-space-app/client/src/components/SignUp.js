@@ -3,7 +3,9 @@ import { Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+import { Link } from "react-router-dom";
 import '../styles/signup.css'
+
 
 const SignUp = (props) => {
     // set initial form state
@@ -20,13 +22,6 @@ const SignUp = (props) => {
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-
-        // check if form has everything (as per react-bootstrap docs)
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
 
         try {
             const { data } = await addUser({
@@ -65,12 +60,12 @@ const SignUp = (props) => {
                             required minLength="8" maxLength="16"></input>
                     </div>
                     <div id="signUpButton">
-                        <button disabled={!(userFormData.name && userFormData.email && userFormData.password)} onClick={handleFormSubmit}>Sign Up</button>
+                        <Link><button disabled={!(userFormData.name && userFormData.email && userFormData.password)} onClick={handleFormSubmit}>Sign Up</button></Link>
                     </div>
-                </div>
-                <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-                    Something went wrong with your signup!
+                    <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+                    Something went wrong with your Signup!
                 </Alert>
+                </div>
             </div>
         </>
 
