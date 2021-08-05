@@ -25,7 +25,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser: User
 
-    addPhoto(userId: ID!, photo: String!): User
+    addPhoto(photo: String!): User
     deletePhoto(photo: String!): User
     addPref(userId: ID!, pref: String!): User
     deletePref(pref: String!): User

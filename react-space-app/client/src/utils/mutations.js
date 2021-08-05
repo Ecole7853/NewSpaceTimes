@@ -38,8 +38,8 @@ export const REMOVE_USER = gql`
 `;
 
 export const ADD_PHOTO = gql`
-mutation addPhoto($userId: ID!, $photo: String!) {
-    addPhoto(userId: $userId, photo: $photo) {
+mutation addPhoto($photo: String!) {
+    addPhoto(photo: $photo) {
         _id
         name
         photos
