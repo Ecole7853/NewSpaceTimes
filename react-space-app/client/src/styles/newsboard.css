@@ -1,7 +1,7 @@
 .p2background{
     min-width: 100%;
     min-height: 100%;
-    background:url(../images/reportinglive.jpg) center center no-repeat;
+    /* background:url(../images/reportinglive.jpg) center center no-repeat; */
     width:100vw;
     height: 100vh;
 }
@@ -14,3 +14,53 @@ html, body {
     max-height: 100%;
     max-width: 100%;
 }
+
+.newsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: black;
+}
+
+img {
+    width: 100%;
+}
+
+.iss-location {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-station {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.space-station h2, .space-station p {
+   color: black;
+}
+
+.top-space-news {
+    text-align: center;
+    background: black;
+}
+
+.nasa-potd-div {
+    padding: 15px;
+    background: black;
+}
+
+.nasa-potd-div h2{
+   text-align: center
+}
+
+.issDiv { 
+    margin: 20px 0;
+}
+
+h1, h2, p {
+    color: white;
+}
+

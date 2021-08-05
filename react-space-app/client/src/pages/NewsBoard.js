@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom'
 import Spacexnews from "../components/spaceXnews";
 import Issnews from "../components/issNews";
 import TopSpacenews from '../components/TopSpaceNews'
+import Navigation from '../components/Navigation'
 
 function NewsBoard(props) {
   return (
