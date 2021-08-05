@@ -1,9 +1,10 @@
 import React from "react";
-//import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/newsboard.css";
 import Potd from '../components/PoTD';
-import Navigation from "../components/Navigation";
+import Spacexnews from "../components/spaceXnews";
+import Issnews from "../components/issNews";
+import TopSpacenews from '../components/TopSpaceNews'
 
 function NewsBoard(props) {
   return (
@@ -11,9 +12,11 @@ function NewsBoard(props) {
     <Navigation />
       <div className="p2background">
         <Potd />
+        <Spacexnews /> 
+        <Issnews />
+        <TopSpacenews />
       </div>
-
-      <Footer />
+      
     </div>
   );
 }
