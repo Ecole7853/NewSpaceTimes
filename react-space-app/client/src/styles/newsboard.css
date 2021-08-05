@@ -14,3 +14,29 @@ html, body {
     max-height: 100%;
     max-width: 100%;
 }
+
+.newsDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+img {
+    width: 100%;
+}
+
+.iss-location {
+    display: flex;
+    justify-content: space-around;
+}
+
+.space-station {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.top-space-news h2 {
+    text-align: center;
+}

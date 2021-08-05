@@ -5,15 +5,16 @@ import Potd from '../components/PoTD';
 import Spacexnews from "../components/spaceXnews";
 import Issnews from "../components/issNews";
 import TopSpacenews from '../components/TopSpaceNews'
+import Navigation from '../components/Navigation'
 
 function NewsBoard(props) {
   return (
     <div id="newsBoardContainer">
     <Navigation />
+    <Issnews />
       <div className="p2background">
         <Potd />
         <Spacexnews /> 
-        <Issnews />
         <TopSpacenews />
       </div>
       
