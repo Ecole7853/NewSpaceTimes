@@ -7,6 +7,24 @@ body {
   font-family: sans-serif;
 }
 
+#frontRowOne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  min-width: 25vw;
+  background-color: black;
+}
+
+#frontRowTwo {
+  min-width: 50vw;
+}
+
+#frontRowThree {
+  min-width: 25vw;
+  background-color: black;
+}
+
 /* preloaded react stuff */
 
 .App {

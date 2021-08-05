@@ -7,9 +7,8 @@ import Navigation from "../components/Navigation";
 
 function NewsBoard(props) {
   return (
-    <div>
-      <Navigation />
-
+    <div id="newsBoardContainer">
+    <Navigation />
       <div className="p2background">
         <Potd />
       </div>

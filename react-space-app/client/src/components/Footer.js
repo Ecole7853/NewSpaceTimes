@@ -6,7 +6,7 @@ function Footer() {
     <footer className="bg-light text-center text-black">
       <div className="container p-4 pb-0"></div>
 
-      <div className="text-center p-3 copyRight">© 2021 Add Team Name</div>
+      <div className="text-center p-3 copyRight">© 2021 New Space Times</div>
     </footer>
   );
 }
