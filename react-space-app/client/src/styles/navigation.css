@@ -1,0 +1,16 @@
+#navContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 850px;
+
+}
+
+#navOne {
+
+}
+#navTwo {
+    margin-left: 50px;
+}
+#navThree {
+    margin-left: 50px;
+}

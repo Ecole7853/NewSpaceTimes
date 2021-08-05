@@ -10,15 +10,15 @@ function Navigation() {
   };
 
   return (
-    <nav>
+    <nav id="navContainer">
       <div className="row navLink">
-        <div className="col">
+        <div id="navOne" className="col">
           <Link to={`/profile`}>Profile</Link>
         </div>
-        <div className="col">
-          <Link to={`/newsboard`}>News Feed</Link>
+        <div id="navTwo" className="col">
+          <Link to={`/newsboard`}>News</Link>
         </div>
-        <div className="col">
+        <div id="navThree" className="col">
         <Link onClick={logout} to={`/`}>Logout</Link>
         </div>
       </div>
