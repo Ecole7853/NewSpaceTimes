@@ -4,27 +4,20 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from '../utils/auth';
 import { Alert } from 'react-bootstrap'
 import '../styles/frontpage.css';
-import { Link } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 
 const FrontPage = (props) => {
     const [userFormState, setUserFormState] = useState({ email: '', password: '' });
-    const [loginUser] = useMutation(LOGIN_USER);
+    const [loginUser, {error, data}] = useMutation(LOGIN_USER);
     const [showAlert, setShowAlert] = useState(false);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
         setUserFormState({ ...userFormState, [name]: value });
     };
-
+    //console.log(Auth.loggedIn())
     const handleFormSubmit = async (event) => {
         event.preventDefault();
-
-        // check if form has everything (as per react-bootstrap docs)
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
 
         try {
             const { data } = await loginUser({
@@ -34,7 +27,7 @@ const FrontPage = (props) => {
             Auth.login(data.login.token);
 
         } catch (err) {
-            //console.error(err);
+            console.error(err);
             setShowAlert(true);
         }
 
@@ -47,28 +40,35 @@ const FrontPage = (props) => {
     return (
         <>
             <div id="frontContainer">
+                { Auth.loggedIn() ? <Redirect to="/newsboard" /> : null}
                 <div id="frontImage">
                     <div id="frontSpacingContainer">
                         <div id="frontRowOne">
-                            <div id="frontLogin">
-                                <div id="frontNameContainer">
-                                    <p>Please Enter Email</p>
-                                    <input type="email" id="frontName" name="email" value={userFormState.email}
-                                        onChange={handleChange} required minLength="8" maxLength="16"></input>
+                            {data ? (
+                                <Redirect to="/newsboard" />
+                            ) : (
+                                <div id="frontLogin">
+                                    <div id="frontNameContainer">
+                                        <p>Please Enter Email</p>
+                                        <input type="email" id="frontName" name="email" value={userFormState.email}
+                                            onChange={handleChange} required minLength="8" maxLength="16"></input>
+                                    </div>
+                                    <div id="frontPwContainer">
+                                        <p>Please Enter Password</p>
+                                        <input type="password" id="frontPw" name="password" value={userFormState.password}
+                                            onChange={handleChange} required minLength="8" maxLength="16"></input>
+                                    </div>
+                                    <div id="buttons">
+                                        <button id="frontSubmit" onClick={handleFormSubmit}>Enter</button>
+                                        <Link to={"/signup"}><button id="frontSignButton">Sign Up</button></Link>
+                                    </div>
                                 </div>
-                                <div id="frontPwContainer">
-                                    <p>Please Enter Password</p>
-                                    <input type="password" id="frontPw" name="password" value={userFormState.password}
-                                        onChange={handleChange} required minLength="8" maxLength="16"></input>
-                                </div>
-                                <div id="buttons">
-                                    <button id="frontSubmit" onClick={handleFormSubmit}>Enter</button>
-                                    <Link to={"/signup"}><button id="frontSignButton">Sign Up</button></Link>
-                                </div>
-                            </div>
-                            <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-                                Invalid Username/Password please try again!
-                            </Alert>
+                            )}
+                            {error && (
+                                <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+                                    {error.message}
+                                </Alert>
+                             )}
                         </div>
                         <div id="frontRowTwo"></div>
                         <div id="frontRowThree"></div>
