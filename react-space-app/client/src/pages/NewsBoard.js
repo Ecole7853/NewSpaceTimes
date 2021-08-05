@@ -9,7 +9,7 @@ import Navigation from '../components/Navigation'
 
 function NewsBoard(props) {
   return (
-    <div id="newsBoardContainer">
+    <div id="newsBoardContainer" className="news-background">
     <Navigation />
     <Issnews />
       <div className="p2background">
