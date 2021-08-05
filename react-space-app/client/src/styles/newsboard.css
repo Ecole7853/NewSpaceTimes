@@ -9,3 +9,8 @@
 #newsBoardContainer {
     background-color: black;
 }
+
+html, body {
+    max-height: 100%;
+    max-width: 100%;
+}

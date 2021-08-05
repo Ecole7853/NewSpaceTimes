@@ -25,6 +25,10 @@ body {
   background-color: black;
 }
 
+#headerContainer {
+  background-color: black;
+}
+
 /* preloaded react stuff */
 
 .App {

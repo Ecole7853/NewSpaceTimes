@@ -3,7 +3,7 @@ import "../styles/header.css";
 
 function Header() {
   return (
-    <header className=" navbar-light bg-header">
+    <header className="navbar-light bg-header">
       <div className="row">
         <div id="navbar" className="navbar-brand col">
           <h1 id="headerH1">New Space Times</h1>
