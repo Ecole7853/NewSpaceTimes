@@ -4,6 +4,7 @@ import FrontPage from "./components/FrontPage";
 import Profile from "./pages/Profile";
 import SignUp from "./components/SignUp";
 import NewsBoard from "./pages/NewsBoard";
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -51,6 +52,9 @@ function App() {
             </Route>
             <Route exact path="/newsboard">
               <NewsBoard />
+            </Route>
+            <Route exact path="/profile">
+              <Profile />
             </Route>
           </div>
         </div>
