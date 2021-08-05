@@ -2,10 +2,10 @@ const fetch = require('node-fetch');
 
 const nasaApiKey = '94jx5aj4QNfyedbpPQ5m3UkzkknBz4yKIZpynDay';
 
-const dailyPhoto = () => {
+export const dailyPhoto = () => {
     const apiUrl = 'https://api.nasa.gov/planetary/apod?api_key='+nasaApiKey;
 
-    fetch(apiUrl)
+    return fetch(apiUrl)
     .then(function(response) {
         return response.json();
     })
@@ -17,7 +17,7 @@ const dailyPhoto = () => {
 
 //dailyPhoto();
 
-const marsRover = () => {
+export const marsRover = () => {
     //user will need to select sol ie. 0-1000, camera type and update url for customizable search
     const apiUrl = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000camera=fhaz&api_key=${nasaApiKey}`;
 
@@ -33,7 +33,7 @@ const marsRover = () => {
 // marsRover();
 
 
-const spaceX = () => {
+export const spaceX = () => {
 
     const apiUrl = `https://api.spacexdata.com/v4/launches/latest`;
 
@@ -52,7 +52,7 @@ const spaceX = () => {
 
 
 
-const issSearch = () => {
+export const issSearch = () => {
     //user will need to select sol ie. 0-1000, camera type and update url for customizable search
     const apiUrl = `https://api.wheretheiss.at/v1/satellites/25544`;
 
@@ -70,7 +70,7 @@ const issSearch = () => {
 // issSearch();
 
 
-const spaceNews = () => {
+export const spaceNews = () => {
     //user will need to select sol ie. 0-1000, camera type and update url for customizable search
     const apiUrl = `https://api.spaceflightnewsapi.net/v3/articles?title_contains=space`;
 
@@ -131,4 +131,4 @@ const spaceNews = () => {
 // spaceNews();
 
 
-module.exports = { dailyPhoto, marsRover, spaceNews, spaceX, issSearch }
+//module.exports = { dailyPhoto, marsRover, spaceNews, spaceX, issSearch }

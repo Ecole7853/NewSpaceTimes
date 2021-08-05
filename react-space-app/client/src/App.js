@@ -1,8 +1,8 @@
 import './styles/App.css';
 import React from "react";
-import FrontPage from "./components/FrontPage";
+import FrontPage from "./pages/FrontPage";
 import Profile from "./pages/Profile";
-import SignUp from "./components/SignUp";
+import SignUp from "./pages/SignUp";
 import NewsBoard from "./pages/NewsBoard";
 
 import {
