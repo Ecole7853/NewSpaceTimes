@@ -13,15 +13,13 @@ function NewsBoard(props) {
     <div id="newsBoardContainer">
       {Auth.loggedIn() ? null : <Redirect to="/" />}
       <Navigation />
-      <div className="p2background row">
+      <Issnews />
+      <div className="p2background">
         <div className="col">
           <Potd />
         </div>
         <div className="col">
           <Spacexnews />
-        </div>
-        <div className="col">
-          <Issnews />
         </div>
         <div className="col">
           <TopSpacenews />
