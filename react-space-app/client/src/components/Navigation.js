@@ -10,19 +10,19 @@ function Navigation() {
   };
 
   return (
-    <nav id="navContainer">
-      <div className="row navLink">
-        <div id="navOne" className="col">
-          <Link to={`/profile`}>Profile</Link>
-        </div>
-        <div id="navTwo" className="col">
-          <Link to={`/newsboard`}>News</Link>
-        </div>
-        <div id="navThree" className="col">
+    <div className="navContainer">
+      <ul className="nav">
+        <li className="nav-link">
+        <Link to={`/profile`}>Profile</Link>
+        </li>
+        <li className="nav-link">
+        <Link to={`/newsboard`}>News</Link>
+        </li>
+        <li className="nav-link">
         <Link onClick={logout} to={`/`}>Logout</Link>
-        </div>
-      </div>
-    </nav>
+        </li>
+      </ul>
+    </div>
   );
 }
 export default Navigation;

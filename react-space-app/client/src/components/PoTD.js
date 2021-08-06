@@ -39,10 +39,11 @@ export default function Potd ({ userId }) {
     dailyPhoto();
     return (
         <div>
-            <div className="nasa-potd-div">
-                <h2>NASA Photo of the Day</h2>
+            <div className='newsDiv'>
+            <h2>NASA Photo of the Day</h2>
             <img className="daily-photo" alt="POTD - Space API Call" src="" />
-            <button onClick={handleSavePhoto} className="">Save</button>
+            <p>Save this photo to your profile!</p>
+            <button onClick={handleSavePhoto} className="btn btn-primary">Save</button>
             </div>
         </div>
     )
