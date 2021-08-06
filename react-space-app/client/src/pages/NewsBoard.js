@@ -7,22 +7,19 @@ import { Redirect } from 'react-router-dom'
 import Spacexnews from "../components/spaceXnews";
 import Issnews from "../components/issNews";
 import TopSpacenews from '../components/TopSpaceNews'
-import Navigation from '../components/Navigation'
 
 function NewsBoard(props) {
   return (
     <div id="newsBoardContainer">
       {Auth.loggedIn() ? null : <Redirect to="/" />}
       <Navigation />
-      <div className="p2background row">
+      <Issnews />
+      <div className="p2background">
         <div className="col">
           <Potd />
         </div>
         <div className="col">
           <Spacexnews />
-        </div>
-        <div className="col">
-          <Issnews />
         </div>
         <div className="col">
           <TopSpacenews />
