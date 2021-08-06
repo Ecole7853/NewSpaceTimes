@@ -14,3 +14,19 @@
 #navThree {
     margin-left: 50px;
 }
+
+.nav-link {
+    margin: 0 35px;
+}
+
+.nav {
+    justify-content: flex-end;
+}
+
+.potd-align {
+    text-align: center;
+}
+
+.mainNews {
+    display: flex;
+}

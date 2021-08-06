@@ -15,11 +15,13 @@ function NewsBoard(props) {
       <Navigation />
       <Issnews />
       <div className="p2background">
+        <div>
         <div className="col">
           <Potd />
         </div>
         <div className="col">
           <Spacexnews />
+        </div>
         </div>
         <div className="col">
           <TopSpacenews />
