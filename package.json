@@ -13,9 +13,9 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^5.1.0"
   },
   "dependencies": {
     "node-fetch": "^2.6.1"
+    "concurrently": "^5.1.0"
   }
 }
